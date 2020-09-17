@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!--- Design And Developed By Muhammad Waseem(wasiii)-->
+ <!---------------THANKS FOR CHECK :)--------------->
+ <!---------------HAPPY CODING :) ---------------------->
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <link rel="stylesheet" href="style.css" type="text/css"/>
+ <title>Quiz App</title>
+ <style>
+	
+body{
+ padding:0px;
+ margin:0px;
+ background-color:#E6E6E6;
+ font-family:lato;
+}
+.questions{
+ margin:50px auto;
+ height:500px;
+ width:900px;
+ background-color:#0075BA;
+ box-shadow: 1px 2px 13px 6px #0000005c;
+}
+.sub-container{
+ 
+}
+.upper{
+ width:100%;
+ height:75px;
+ background-color:#0078BD;
+}
+.question-no{
+ width:100%;
+ height:45px;
+ padding-top:px;
+ background-color:#00436C;
+}
+.question-container{
+ width:100%;
+ height:310px;
+ background-color:white;
+}
+.start{
+ margin:50px auto;
+ height:500px;
+ width:900px;
+ background-color:#0075BA;
+ box-shadow: 1px 2px 13px 6px #0000005c;
+ 
+}
+.btn{
+ position:relative;
+ top:220px;
+ left:380px;
+ padding:15px 30px 15px 30px;
+ font-weight:800;
+ font-size:20px;
+ border-style:none;
+ border-radius:40px;
+ outline:none;
+ font-family:lato;
+ color:#0075BA;
+ 
+ 
+ 
+ 
+}
+.main-heading{
+ color:white;
+ float:left;
+ margin-left:20px;
+ font-weight:100;
+ font-family:lato;
+}
+.profile-pic{
+ height:50px;
+ width:50px;
+ background-color:white;
+ border-radius:40px;
+ outline:none;
+
+}
+.co{
+ float:right;
+}
+.log{
+ margin-top:7px;
+ margin-right:5px;
+ float:right;
+}
+.questionof{
+ width:50%;
+ float:left;
+ margin-left:20px;
+ font-size:12px;
+ text-transform:uppercase;
+}
+.head{
+ margin-top:0px;
+ color:#0080C7;
+}
+.divs{
+ width:50%;
+ float:left;
+ margin-top:5px;
+ margin-left:5px;
+ height:20px;
+ width:20px;
+ border-radius:20px;
+ background:white;
+ display:inline-flex;
+ 
+}
+.copy{
+ text-align:center;
+ color:white;
+ margin-top:25px;
+ font-size:17px;
+}
+.left{
+ width:48%;
+ float:left;
+ margin-left:20px;
+}
+.right{
+ width:55%;
+ float:right;
+ margin-top:-50px;
+ 
+}
+.this1{
+ display:inline-flex;
+}
+.option{
+ margin-left:10px;
+}
+.options{
+ display:flex;
+ padding:;
+ border-radius:0px;
+ margin-bottom:5px;
+ border-style:solid;
+ border-width:2px;
+ border-color:#0080C7;
+ outline:none;
+ cursor:pointer;
+ font-size:30px;
+ font-weight:600;
+ padding:0px 20px 0px 20px;
+ border-radius:50%;
+
+ 
+ 
+}
+.options:hover{
+ background-color:#0080C7;
+ color:white;
+ cursor:hover;
+}
+.true{
+ float:right;
+ margin-right:20px;
+}
+.logout{
+ margin-right:20px;
+ margin-top:23px;
+ margin-left:5px;
+ text-transform:uppercase;
+ color:white;
+ float:right;
+}
+.btn:hover{
+ box-shadow: 0px 1px 5px 5px #dcdcdcc2;
+}
+@font-face{
+ font-family:"serief";
+ src:"NotoSerif-Regular.ttf";
+}
+@font-face{
+ font-family:"lato";
+ src:"Lato-Regular.ttf";
+}
+#emoji{
+ margin-top:140px;
+ margin-left:390px;
+ 
+ 
+ 
+}
+#scoreShower{
+ color:white;
+ text-align:center;
+}
+ </style>
+</head>
+<body>
+ <div class="main-container">
+     <div class="start" id="start" style="display:block">
+   <div>
+   <button class="btn" id="btn1">Start Quiz</button>
+   </div>
+  
+        </div>  
+  <div class="questions" id="questions" style="display:none">
+  <div class="upper">
+   <div>
+   <h1 class="main-heading">Web Design And Development</h1>
+    <div>
+     <div class="log">
+     <img src="pictures\profile.png" height="60px" width="60px" /><span  class="logout">Log Out</span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="question-no">
+   <div class="questionof">
+   <h1 class="head">Question <span id="current">1</span> Of<span id="currentTotal"> 5</span></h1>
+   </div>
+   <div class="true">
+   <div class="divs"></div>
+   <div class="divs"></div>
+   <div class="divs"></div>
+   <div class="divs"></div>
+   <div class="divs"></div>
+   </div>
+  </div>
+  <div class="question-container">
+  <div class="left">
+  <h2 id="quest">HTML stands for?</h2>
+  </div>
+  <div class="right">
+  <div class="this1"><button class="options">A</button><h2 id="option1" class="option" value="A">hyper text</h2></div>
+  <div class="this1"><button class="options">B</button><h2 id="option2" class="option" value="B">This is first option</h2></div>
+     <div class="this1"><button class="options">C</button><h2 id="option3" class="option" value="C">This is first option</h2></div>
+  <div class="this1"><button class="options">D</button><h2 id="option4" class="option" value="D">This is first option</h2></div>
+  </div>
+  </div>
+  <div class="copy">&copy; Developed By Waseem</div>
+  </div>
+  <div class="start" id="score" style="display:none">
+    <img src="pictures\100.png" height="" width="110px" alt="110px" id="emoji"/>
+    <h2 id="scoreShower">Score : 100%</h2>
+  </div>
+  
+ </div>
+ 
+ <script>
+  var divs=document.getElementsByClassName('divs');
+ var emoji=document.getElementById('emoji');
+ var scoreShower=document.getElementById('scoreShower');
+ var scoreView=document.getElementById('score');
+ var current=document.getElementById('current');
+ var currentTotal=document.getElementById('currentTotal');
+ var selectVal=document.getElementById("option1").value;
+ var selectVa2=document.getElementById("option2").value;
+ var selectVa3=document.getElementById("option3").value;
+ var selectVa4=document.getElementById("option4").value;
+ var quest=document.getElementById('quest');
+ var option1=document.getElementById('option1');
+  var option2=document.getElementById('option2');
+  var option3=document.getElementById('option3');
+  var option4=document.getElementById('option4');
+  var button1=document.getElementById('btn1');
+  var section1=document.getElementById('start');
+  var section2=document.getElementById('questions');
+  button1.onclick=function(){
+  section1.style.display="none";
+  section2.style.display="block";
+  renderQuestion();
+  }
+  let questions=[
+ {
+  question:"HTML stands for ?",
+  //imgScr:,
+  choiceA:"Hyper Text Markup Language",
+  choiceB:"Hyper Text Manufacture Language",
+  choiceC:"Hyper Testng Markup Language",
+  choiceD:"Hyper Test Manufacture Language",
+  correct:"A",
+ },
+ {
+  question:"CSS stands for?",
+  //imgScr:,
+  choiceA:"Cascading Stylish Sheet",
+  choiceB:"Correct Style Sheet",
+  choiceC:"Cascading Style Sheet",
+  choiceD:"Case Style Sheet",
+  correct:"C",
+ },
+ {
+  question:"DOM Stands for?",
+  //imgScr:,
+  choiceA:"Document Object Mode",
+  choiceB:"Document Object Model",
+  choiceC:"Document Odd Model ",
+  choiceD:"Document Object Midel",
+  correct:"B",
+ },
+ {
+  question:"JavaScript is a...?",
+  //imgScr:,
+  choiceA:"Programing Language",
+  choiceB:"Text Markup Language",
+  choiceC:"Query Language",
+  choiceD:"Data Mining Tool",
+  correct:"A",
+ },
+ {
+  question:"SQL stands for?",
+  //imgScr:,
+  choiceA:"Started Query Language",
+  choiceB:"Structured Query Language",
+  choiceC:"Strong Query Language",
+  choiceD:"Stable Query Language",
+  correct:"B",
+ }
+ 
+] 
+     var counts=1;
+     var totalScore=0;
+     var runningQuestion=0;
+  
+  function renderQuestion(){
+    let q=questions[runningQuestion];
+  quest.innerHTML=q.question;
+  option1.innerHTML=q.choiceA;
+  option2.innerHTML=q.choiceB;
+  option3.innerHTML=q.choiceC;
+  option4.innerHTML=q.choiceD;
+  
+  }
+  var buttons=document.getElementsByClassName('options');
+  for(i=0;i<buttons.length;i++){
+  buttons[i].onclick=function(){
+        let q=questions[runningQuestion];
+     if(this.innerHTML===q.correct){
+     //console.log("true");
+     divs[runningQuestion].style.background="green";
+     runningQuestion++;
+     totalScore++;
+     count();
+   if(runningQuestion<questions.length)
+   
+    {
+    renderQuestion();
+    console.log(counts);
+    console.log(questions.length);
+     
+    }
+   else{
+       showScore();
+   
+   }
+     }
+     else{
+           divs[runningQuestion].style.background="red";    
+    runningQuestion++;
+     count();
+     console.log(counts);
+     console.log(questions.length);
+     //console.log("false");
+   if(runningQuestion<questions.length)
+    {
+     
+     renderQuestion();
+    }
+   else{
+    showScore();
+     }
+  
+  
+  }
+  
+  
+  }
+  function showScore(){
+  section2.style.display="none";
+  scoreView.style.display="block";
+  var score1=((totalScore/5)*100);
+  scoreShower.innerHTML="Score : "+((totalScore/5)*100)+"%";
+  
+  }
+  
+
+}
+function count(){
+ current.innerHTML=++counts;
+ 
+
+}
+
+ </script>
+</body>
+</html>
